@@ -1,3 +1,15 @@
+
+@font-face {
+    font-family: 'raleway';
+    src: url('FileName.eot');
+    src: url('../font/raleway-v22-latin-regular.eot') format('embedded-opentype'),
+       url('../font/raleway-v22-latin-regular.woff') format('woff'),
+       url('../font/raleway-v22-latin-regular.ttf') format('truetype'),
+       url('../font/raleway-v22-latin-regular.svg#raleway') format('svg');
+    font-style: normal;
+    font-weight: normal;
+  }
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -7,6 +19,7 @@ html {
     margin: 0;
     box-sizing: inherit;
     font-size: 1.6rem;
+    font-family: 'raleway';
 }
 .bg {
     width: 100%;
@@ -25,11 +38,8 @@ html {
     align-items: center;
     padding-block: 3rem;
     border: 5px solid #0287cf13;
-    perspective: 200px;
-    /* perspective-origin: 500; */
 }
 .profile-image {
-    /* backface-visibility: hidden;; */
     background-image: url(../img/profile1.jpg);
     background-position: center;
     background-size: cover;
@@ -45,8 +55,9 @@ html {
     }
 }
 .name {
-    font-weight: bold;
+    font-weight: 600;
     padding-top: 2rem;
+    letter-spacing: .4px;
 }
 .skill {
     padding-top: .5rem;
