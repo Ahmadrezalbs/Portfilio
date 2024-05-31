@@ -58,15 +58,6 @@ html {
     overflow: hidden;
 }
 
-.profile-image::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right,rgba(2, 135, 207, 0.054) 30%,rgba(61, 160, 213, 0.378));
-    z-index: 1000;
-}
-
 @keyframes trans {
     to {
         transform: translateY(-16rem);
