@@ -1,31 +1,36 @@
-
 @font-face {
     font-family: 'raleway';
     src: url('FileName.eot');
     src: url('../font/raleway-v22-latin-regular.eot') format('embedded-opentype'),
-       url('../font/raleway-v22-latin-regular.woff') format('woff'),
-       url('../font/raleway-v22-latin-regular.ttf') format('truetype'),
-       url('../font/raleway-v22-latin-regular.svg#raleway') format('svg');
+        url('../font/raleway-v22-latin-regular.woff') format('woff'),
+        url('../font/raleway-v22-latin-regular.ttf') format('truetype'),
+        url('../font/raleway-v22-latin-regular.svg#raleway') format('svg');
     font-style: normal;
     font-weight: normal;
-  }
+}
 
 html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
-*,*::after,*::before {
+
+*,
+*::after,
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
     font-size: 1.6rem;
     font-family: 'raleway';
+    user-select: none;
 }
+
 .bg {
     width: 100%;
     height: 40vh;
     background-color: #0287cf;
 }
+
 .card {
     transform: translateY(-15.5rem);
     margin-inline: auto;
@@ -38,33 +43,49 @@ html {
     align-items: center;
     padding-block: 3rem;
     border: 5px solid #0287cf13;
+    animation: trans 500ms ease-out infinite alternate;
 }
+
 .profile-image {
+    position: relative;
     background-image: url(../img/profile1.jpg);
     background-position: center;
     background-size: cover;
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
-    border: 1px solid #0287cf;
-    animation: rotate 600ms ease infinite alternate;
+    outline: 6px solid rgba(44, 115, 153, 0.065);
+    overflow: hidden;
 }
-@keyframes rotate {
+
+.profile-image::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,rgba(2, 135, 207, 0.054) 30%,rgba(61, 160, 213, 0.378));
+    z-index: 1000;
+}
+
+@keyframes trans {
     to {
-    transform: translateY(.4rem);
+        transform: translateY(-16rem);
     }
 }
+
 .name {
     font-weight: 600;
     padding-top: 2rem;
     letter-spacing: .4px;
 }
+
 .skill {
     padding-top: .5rem;
     font-size: 1.2rem;
     color: #363535;
     padding-bottom: 5px;
 }
+
 .links {
     display: flex;
     justify-content: space-between;
@@ -73,6 +94,7 @@ html {
     padding-top: 2rem;
     position: relative;
 }
+
 .links::after {
     content: '';
     position: absolute;
@@ -82,9 +104,11 @@ html {
     height: 1px;
     background-color: #03030313;
 }
+
 .links a {
     width: 42%;
 }
+
 .links img {
     width: 100%;
 }
